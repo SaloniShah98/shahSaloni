@@ -1,0 +1,32 @@
+.navbar-collapse{
+    flex-grow: 0 !important;
+}
+
+.nav-item{
+    a {
+        transition: all 300ms ease;
+    }
+
+    :hover{
+        color: orange;
+        font-weight: 900;
+        // text-decoration: underline;
+        // text-decoration-color: orange;
+    }
+
+    :focus {
+        color: orange;
+        font-weight: 700;
+        border-bottom: 3px solid orange;
+        // text-decoration: overline;
+        // text-decoration-color: #1a1a1a;
+    }
+
+    a.active {
+        color: orange;
+        font-weight: 700;
+        border-bottom: 3px solid orange;
+        // text-decoration: overline;
+        // text-decoration-color: #1a1a1a;
+    }
+}

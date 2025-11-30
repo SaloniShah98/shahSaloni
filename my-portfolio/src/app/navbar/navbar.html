@@ -1,15 +1,11 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" routerLink="/">
-            <img src="assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"
+            <img src="assets/shahsalonilogo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"
                 onerror="this.style.display='none'">
-            My Portfolio
+            <!-- My Portfolio -->
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse align-center" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
@@ -18,22 +14,27 @@
                     <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a>
                 </li>
             </ul>
-            <div class="d-flex align-items-center">
-                <div class="dropdown me-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        {{ currentLang }}
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" (click)="setLang('EN')">EN</a></li>
-                        <li><a class="dropdown-item" (click)="setLang('ES')">ES</a></li>
-                    </ul>
-                </div>
-                <button class="btn btn-outline-primary" (click)="toggleTheme()">
-                    <i class="bi" [class.bi-moon-fill]="isDarkTheme" [class.bi-sun-fill]="!isDarkTheme"></i>
-                    {{ isDarkTheme ? 'Dark' : 'Light' }}
-                </button>
-            </div>
         </div>
+        <div class="d-flex align-items-center">
+            <div class="dropdown me-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{ currentLang }}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" (click)="setLang('EN')">EN</a></li>
+                    <li><a class="dropdown-item" (click)="setLang('ES')">ES</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-outline-primary" (click)="toggleTheme()">
+                <i class="bi" [class.bi-moon-fill]="isDarkTheme" [class.bi-sun-fill]="!isDarkTheme"></i>
+                {{ isDarkTheme ? '' : '' }}
+            </button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
     </div>
 </nav>
